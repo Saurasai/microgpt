@@ -1,86 +1,57 @@
-Certainly! Below is a sample documentation for the provided code:
+## Bigram Transformer Language Model
+
+This repository contains code for training and generating text using a language model based on a bigram approach with a transformer architecture.
+
+### Overview
+
+This script performs the following steps:
+
+1. Data Preprocessing: Reads input text data from a file, preprocesses it, and splits it into training and validation sets.
+2. Model Definition: Defines PyTorch modules for building the transformer-based language model, including self-attention layers, feedforward layers, and transformer blocks.
+3. Model Training: Trains the language model using the specified hyperparameters and optimizer.
+4. Text Generation: Generates text using the trained language model.
+
+### Requirements
+
+- PyTorch (>=1.9.0): [https://pytorch.org/](https://pytorch.org/)
+
+### Usage
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/yourusername/bigram-transformer-language-model.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Run the script:
+
+    ```bash
+    python train_and_generate.py
+    ```
+
+### Hyperparameters
+
+- Batch size
+- Block size
+- Maximum iterations
+- Evaluation interval
+- Learning rate
+- Number of attention heads
+- Number of transformer layers
+- Dropout probability
+
+### Dataset
+
+The script expects the input text data to be stored in a file named `input.txt`.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-# Transformer-Based Language Model Documentation
-
-This documentation provides an overview of the transformer-based language model implemented in this repository. The model is designed to generate text based on a given starting prompt using the Transformer architecture.
-
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Usage](#usage)
-3. [Model Architecture](#model-architecture)
-4. [Training](#training)
-5. [Text Generation](#text-generation)
-6. [Example](#example)
-
-## Overview
-
-The transformer-based language model implemented in this repository leverages PyTorch to create a neural network capable of generating text. It follows the Transformer architecture, which has demonstrated excellent performance in various natural language processing tasks.
-
-## Usage
-
-To use the language model, follow these steps:
-
-1. **Clone the Repository**: 
-   ```
-   git clone https://github.com/your-username/transformer-language-model.git
-   ```
-
-2. **Install Dependencies**:
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. **Prepare Data**:
-   - Ensure your text dataset is available and accessible.
-   - Update the `input.txt` file with your text data.
-
-4. **Train the Model**:
-   - Run the training script:
-     ```
-     python model.py
-     ```
-
-5. **Generate Text**:
-   - After training, generate text using the trained model:
-     ```
-     python generate_text.py
-     ```
-
-## Model Architecture
-
-The language model follows the Transformer architecture, consisting of self-attention mechanisms and feed-forward layers. It utilizes the following components:
-
-- **Multi-Head Self-Attention**: Captures dependencies between tokens in the input sequence.
-- **Feed-Forward Networks**: Performs nonlinear transformations on the output of the self-attention mechanism.
-- **Positional Encoding**: Incorporates positional information into the input embeddings to maintain sequence order.
-
-## Training
-
-The model is trained using stochastic gradient descent (SGD) with the AdamW optimizer. During training, the model learns to predict the next token in a sequence given the preceding tokens.
-
-## Text Generation
-
-Text generation is performed using the trained model. Given a starting prompt, the model generates new text by predicting subsequent tokens iteratively. Sampling from the predicted token probabilities enables the generation of diverse and contextually relevant text.
-
-## Example
-
-Here's a simple example of how to use the model to generate text:
-
-```python
-python generate_text.py
-```
-
-## Contributing
-
-Contributions to this project are welcome! Please refer to the [Contributing Guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). 
-
----
-
-Feel free to customize this documentation to include additional details or sections specific to your project. Let me know if you need further assistance!
