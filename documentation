@@ -1,4 +1,4 @@
-## Bigram Transformer Language Model
+## Transformer Language Model
 
 This repository contains code for training and generating text using a language model based on a bigram approach with a transformer architecture.
 
